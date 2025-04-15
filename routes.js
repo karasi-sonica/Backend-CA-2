@@ -13,7 +13,7 @@ router.post('/add-user', async(req, res) => {
         }
         res.status(200).json({message:'User added succesfully!!'});
     }catch(err){
-        return res.status(500).json({message:'Internal server error'});
+        return res.status(500).json({message:'Internal server error', err: err.message});
     }
 });
 
